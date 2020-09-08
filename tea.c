@@ -3,5 +3,6 @@ int main()
 {
     printf("tea coffe");
     printf("coffe");
-    printf("chance");s
+    printf("chance");
+    printf("case");
 }
