@@ -2,5 +2,6 @@
 using namespace std;
 int main()
 {
-    cout<<"check poush";
+    cout<<"last check kor6"<<endl;
+    return 0;
 }
