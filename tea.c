@@ -2,4 +2,5 @@
 int main()
 {
     printf("tea coffe");
+    printf("coffe");
 }
