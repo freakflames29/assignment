@@ -16,6 +16,7 @@ int main()
         temp=a[i];
         j=i-1;
         while (j>=0&&a[j]>temp)
+
         {
             a[j+1]=a[j];
             j--;
@@ -27,10 +28,10 @@ int main()
     cout<<"Elemnt after insertion sort"<<endl;
     for ( i = 0; i <n; i++)
     {
-        cout<<" "<<a[i];
+        cout<<" "<<a[i]<<endl;
         /* code */
     }
     return 0;
-    
-    
+
+
 }
