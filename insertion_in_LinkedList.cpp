@@ -30,6 +30,45 @@ node* insertIndex(node* head,int data,int index) //this will insert the data in 
 	return head;
 
 }
+//insert by value
+node* insertByValue(node* head,int data,int value)
+{
+    node* a=new node();
+    a->data=data;
+    node* p=head;
+
+    while (p->data!=value&&p->next!=NULL)
+    {
+        p=p->next;
+    }
+    if (p->data==value)
+    {
+        a->next=p->next;
+        p->next=a;
+
+    }
+    return head;
+
+
+
+}
+// insert at last index
+node* lastinsert(node* head,int data)
+{
+	node* a=new node();
+	a->data=data;
+	node* p=head;
+	while (p->next!=NULL)
+	{
+		p=p->next;
+		/* code */
+	}
+	p->next=a;
+	a->next=NULL;
+	return head;
+	
+
+}
 void trav(node* ptr)// traverse the list and print the elements
 {
 	while(ptr!=0)
@@ -38,46 +77,59 @@ void trav(node* ptr)// traverse the list and print the elements
 		ptr=ptr->next;
 	}
 }
-int main()
-{
-	node* first=new node();
-	node* second=new node();
-	node* third=new node();
-	node* fourth=new node();
-	first->data=10;
-	first->next=second;
+int main() {
+    node *first = new node();
+    node *second = new node();
+    node *third = new node();
+    node *fourth = new node();
+    first->data = 10;
+    first->next = second;
 
-	second->data=20;
-	second->next=third;
+    second->data = 20;
+    second->next = third;
 
-	third->data=30;
-	third->next=NULL;
+    third->data = 30;
+    third->next = NULL;
 
-	cout<<"The LinkedList"<<endl;
+    cout << "The LinkedList" << endl;
 
-	trav(first);
-	/*cout<<"After insert in first postion"<<endl;
-	first=f(first,99);
-	trav(first);*/
+    trav(first);
+//	insert by value
+    cout << "Enter the value" << endl;
+    int val;
+    cin >> val;
+    cout << "Enter the data" << endl;
+    int dat;
+    cin >> dat;
+    cout << "After inserting by value" << endl;
+    first = insertByValue(first, dat, val);
+    trav(first);
+//	cout<<"The elemnt after inserting at last"<<endl;
+//	first=lastinsert(first,599);
+//	trav(first);
+    /*cout<<"After insert in first postion"<<endl;
+    first=f(first,99);
+    trav(first);*/
 
-	/*this will check the inedex and will insert the elemet*/
-	cout<<"Enter the index to insert between 0-3"<<endl;
-	int kol;
-	cin>>kol;
+    /*this will check the inedex and will insert the elemet*/
 
-	cout<<"After insertion in " <<kol <<" index:"<<endl;
-	if(kol==0)
-	{
-		first=f(first,99);
-		trav(first);
+    // i comment this for  checking the insert in last function
 
-	}
-	else
-	{
-	first=insertIndex(first,99,kol);
-	trav(first);
-	}
-	return 0;
+    // cout<<"Enter the index to insert between 0-3"<<endl;
+    // int kol;
+    // cin>>kol;
 
+    // cout<<"After insertion in " <<kol <<" index:"<<endl;
+    // if(kol==0)
+    // {
+    // 	first=f(first,99);
+    // 	trav(first);
 
+    // }
+    // else
+    // {
+    // first=insertIndex(first,99,kol);
+    // trav(first);
+    // }
+    return 0;
 }

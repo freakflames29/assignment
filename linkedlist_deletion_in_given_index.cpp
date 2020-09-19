@@ -78,20 +78,24 @@ int main()
     node* third=new node();
     node* fourth=new node();
 
-    cout<<"Enter the first element:"<<endl;
-    cin>>head->data;
-//    head->data=1;;
+//    cout<<"Enter the first element:"<<endl;
+//    cin>>
+//    head->data;
+       head->data=1;;
     head->next=second;
-    cout<<"Enter the second element:"<<endl;
-    cin>>second->data;
+//    cout<<"Enter the second element:"<<endl;
+//    cin>>
+    second->data=2;
     second->next=third;
-    cout<<"Enter the third element:"<<endl;
-
-    cin>>third->data;
+//    cout<<"Enter the third element:"<<endl;
+//
+//    cin>>
+    third->data=3;
     third->next=fourth;
 
-    cout<<"Enter the Fourth element:"<<endl;
-    cin>> fourth->data;
+//    cout<<"Enter the Fourth element:"<<endl;
+//    cin>>
+    fourth->data=4;
     fourth->next=NULL;
 
     cout<<"before deletion in linked list"<<endl;
