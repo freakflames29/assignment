@@ -14,6 +14,7 @@ node* f(node* gg,int data) /* it will insert the data in the first positon*/
 	return o;
 
 }
+
 node* insertIndex(node* head,int data,int index) //this will insert the data in the given index
 {
 	node* a=new node();
@@ -37,7 +38,7 @@ node* insertByValue(node* head,int data,int value)
     a->data=data;
     node* p=head;
 
-    while (p->data!=value&&p->next!=NULL)
+    while (p->data!=value&&p->next!=nullptr)
     {
         p=p->next;
     }
@@ -58,20 +59,20 @@ node* lastinsert(node* head,int data)
 	node* a=new node();
 	a->data=data;
 	node* p=head;
-	while (p->next!=NULL)
+	while (p->next!=nullptr)
 	{
 		p=p->next;
 		/* code */
 	}
 	p->next=a;
-	a->next=NULL;
+	a->next=nullptr;
 	return head;
 	
 
 }
 void trav(node* ptr)// traverse the list and print the elements
 {
-	while(ptr!=0)
+	while(ptr!=nullptr)
 	{
 		cout<<"Elements:"<<ptr->data<<endl;
 		ptr=ptr->next;
@@ -81,7 +82,6 @@ int main() {
     node *first = new node();
     node *second = new node();
     node *third = new node();
-    node *fourth = new node();
     first->data = 10;
     first->next = second;
 
@@ -89,7 +89,7 @@ int main() {
     second->next = third;
 
     third->data = 30;
-    third->next = NULL;
+    third->next = nullptr;
 
     cout << "The LinkedList" << endl;
 
