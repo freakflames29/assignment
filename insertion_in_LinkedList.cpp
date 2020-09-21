@@ -24,6 +24,7 @@ node* insertIndex(node* head,int data,int index) //this will insert the data in 
 	{
 		b=b->next;
 		i++;
+
 	}
 	a->data=data;
 	a->next=b->next;
@@ -79,6 +80,7 @@ void trav(node* ptr)// traverse the list and print the elements
 	}
 }
 int main() {
+
     node *first = new node();
     node *second = new node();
     node *third = new node();
