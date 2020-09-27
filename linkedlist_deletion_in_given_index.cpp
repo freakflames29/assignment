@@ -45,19 +45,33 @@ node* delByValue(node* head,int value)
 {
     node* p=head;
     node* q=p->next;
+    node* r=q->next;
 
-    while (q->data!=value&&q->next!=NULL)
+    while (r->data!=value&q->data!=value&&p->data!=value&&r->next!=NULL)
     {
         p=p->next;
         q=q->next;
+        r=r->next;
     }
 
-    if (q->data==value)
+    if (r->data==value)
+    {
+        q->next=r->next;
+        delete r;
+
+    }
+    else if(q->data==value)
     {
         p->next=q->next;
-        delete q;
+        free(q);
+    }
+    else if (p->data==value)
+    {
+        head=q;
+        free(p);
 
     }
+
 
     return head;
 
