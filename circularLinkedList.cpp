@@ -12,6 +12,10 @@ void trav(node *head)
     node *p = head;
     do
     {
+        if (p->data == 0 || p->data == 1)
+        {
+            break;
+        }
         cout << "Element is " << p->data << endl;
         p = p->next;
     } while (p != head);
